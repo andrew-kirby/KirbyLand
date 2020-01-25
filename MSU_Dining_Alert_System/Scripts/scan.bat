@@ -1,2 +1,0 @@
-python.exe MSU_Dining_Alert_Controller.py
-pause

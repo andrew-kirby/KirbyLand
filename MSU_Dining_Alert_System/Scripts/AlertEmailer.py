@@ -1,3 +1,5 @@
+""" ALERT EMAILER """
+# Contains methods to send emails with content determined by the food items being watched.
 
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -35,9 +37,8 @@ class AlertEmailer:
 
         body = body + " ----- \n"
 
-        print(body)
+        # print(body)
 
-        """
         # Compose message headers
         msg = MIMEMultipart()
         msg['From'] = fromaddr
@@ -55,4 +56,3 @@ class AlertEmailer:
         server.login(self.senderEmail, self.senderEmailPassword)
         text = msg.as_string()
         server.sendmail(fromaddr, toaddr, text)
-        """

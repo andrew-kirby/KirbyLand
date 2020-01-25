@@ -1,4 +1,6 @@
 """ MENU SCANNER """
+# Requests the menu for Miller and Rendezvous. The menus may then be scanned for specific food items. More information
+# is parsed from items found on the menu.
 
 from lxml import html
 import requests
@@ -28,14 +30,15 @@ class MenuScanner:
 
     def scanMenu(self, item, location):
         query = '//*[contains(text(),"' + item + '")]'
+        results = []
         if location == "Miller":
             results = self.millerMenu.xpath(query)
         elif location == "Rendezvous":
             results = self.rendezvousMenu.xpath(query)
 
-        if results == []:
+        if results == []: # Check for no results
             return []
-        # Handle the results appropriately if there are more than one elements found
+        # Handle the results appropriately if there are more than one element found
         if len(results) > 0:  # More than one result
             list = []
             for r in results:

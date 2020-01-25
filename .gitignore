@@ -1,3 +1,5 @@
 */emailcredentials
 MSU_Dining_Alert_System/Members/*
+!MSU_Dining_Alert_System/Members/samplemember
 MSU_Dining_Alert_System/.idea/*
+MSU_Dining_Alert_System/Scripts/scan.bat

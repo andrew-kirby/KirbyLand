@@ -53,7 +53,7 @@ if __name__ == "__main__":
         # Generate and send report to user based on found items
         if len(found_food) > 0:
             print(found_food)
-            if settings('email_enabled') == 'true':
+            if settings['email_enabled'] == 'true':
                 emailer.emailAlert(m, found_food)
 
     print("Scanning done! :)")
